@@ -74,5 +74,5 @@ def predict_house_price():
 if __name__ == "__main__":
     print("Starting Python Flask server for House price prediction system")
     load_saved_artifacts()
-    # print(get_location_util())
+    get_location_util()
     app.run(debug=True)
