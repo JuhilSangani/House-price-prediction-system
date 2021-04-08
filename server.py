@@ -52,7 +52,7 @@ def get_location():
     response = jsonify({
         'locations' : get_location_util()
     })
-    response.headers.add('Access-Control-Allow-Origin','*')
+    response.headers.add('Access-Control-Allow-Origin','https://house-price-prediction-system7.herokuapp.com/')
 
     return response
 
@@ -66,7 +66,7 @@ def predict_house_price():
     response = jsonify({
         'predicted_price' : get_predicted_price(location, total_sqft, bhk, bath)
     })
-    response.headers.add('Access-Control-Allow-Origin','*')
+    response.headers.add('Access-Control-Allow-Origin','https://house-price-prediction-system7.herokuapp.com/')
 
     return response
 
