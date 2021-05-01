@@ -49,7 +49,9 @@ function onPageLoad() {
         console.log("got response for get_location request");
         if(data) {
             var locations = data.locations;
+            console.log(locations)
             var uiLocations = document.getElementById("uiLocations");
+            console.log(uilocations)
             $('#uiLocations').empty();
             for(var i in locations) {
                 var opt = new Option(locations[i]);
