@@ -26,7 +26,7 @@ function onClickedEstimatePrice() {
     var location = document.getElementById("uiLocations");
     var estPrice = document.getElementById("uiEstimatedPrice");
   
-    var url = "https://house-price-prediction-system7.herokuapp.com/predict_house_price"; 
+    var url = "/predict_house_price"; 
   
     $.post(url, {
         total_sqft: parseFloat(sqft.value),
@@ -43,7 +43,7 @@ function onClickedEstimatePrice() {
 function onPageLoad() {
     console.log( "document loaded" );
 
-    var url = "https://house-price-prediction-system7.herokuapp.com/get_location"; 
+    var url = "/get_location"; 
 
     $.get(url,function(data, status) {
         console.log("got response for get_location request");
