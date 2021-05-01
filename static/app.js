@@ -46,7 +46,7 @@ function onPageLoad() {
     var url = "/get_location"; 
 
     $.get(url,function(data, status) {
-        console.log("got response for get_location request");
+        console.log("got response for get_location request",data);
         if(data) {
             var locations = data.locations;
             console.log(locations)
