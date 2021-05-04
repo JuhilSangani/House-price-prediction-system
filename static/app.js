@@ -26,7 +26,7 @@ function onClickedEstimatePrice() {
     var location = document.getElementById("uiLocations");
     var estPrice = document.getElementById("uiEstimatedPrice");
   
-    var url = "/predict_house_price"; 
+    var url = "https://house-price-prediction-system7.herokuapp.com/predict_house_price"; 
   
     $.post(url, {
         total_sqft: parseFloat(sqft.value),
@@ -43,15 +43,16 @@ function onClickedEstimatePrice() {
 function onPageLoad() {
     console.log( "document loaded" );
 
-    var url = "/get_location"; 
+    var url = "https://house-price-prediction-system7.herokuapp.com/get_location"; 
 
     $.get(url,function(data, status) {
-        console.log("got response for get_location request",data);
+        console.log("got response for get_location request");
         if(data) {
             var locations = data.locations;
-            console.log(locations)
             var uiLocations = document.getElementById("uiLocations");
-            console.log(uiLocations)
+            
+            console.log(locations, uiLocations)
+            
             $('#uiLocations').empty();
             for(var i in locations) {
                 var opt = new Option(locations[i]);
@@ -61,4 +62,4 @@ function onPageLoad() {
     });
 }
   
-window.onload = onPageLoad;
+window.onload = onPageLoad();
