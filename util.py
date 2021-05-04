@@ -30,7 +30,8 @@ def load_saved_artifacts():
     global __locations
     global __model
 
-    with open("columns.json", 'r') as f:
+    with open("columns.json", 'rb') as f:
+        print(f)
         __data_columns = json.load(f)['data_columns']
         __locations = __data_columns[3:]
 
@@ -41,6 +42,7 @@ def load_saved_artifacts():
 
 
 if __name__ == '__main__':
+    print('start')
     load_saved_artifacts()
     print(get_location())
     # print(get_predicted_price('1st Phase JP Nagar', 1000, 2, 2))
