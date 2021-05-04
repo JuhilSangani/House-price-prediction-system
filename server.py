@@ -47,7 +47,7 @@ app = Flask(__name__, template_folder='')
 def home():
     return render_template('app.html')
 
-@app.route("/get_location")
+@app.route("/")
 def get_location():
     response = jsonify({
         'locations' : get_location_util()
