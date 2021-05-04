@@ -51,7 +51,7 @@ function onPageLoad() {
             var locations = data.locations;
             console.log(locations)
             var uiLocations = document.getElementById("uiLocations");
-            console.log(uilocations)
+            console.log(uiLocations)
             $('#uiLocations').empty();
             for(var i in locations) {
                 var opt = new Option(locations[i]);
